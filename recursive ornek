@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+ 
+ void kar(char *p,char *q){
+ 	if(*p==NULL && *q==NULL){
+ 		return;
+	 }
+	 else if(*p!=NULL && *q==NULL){
+	 	printf("%c",*p);
+	 	kar(p+1,q);
+	 }
+	 else if(*p==NULL && *q!=NULL){
+	 	printf("%c",*q);
+	 	kar(p,q+1);
+	 	
+	 }
+	 else{
+	 	if((int ) *p<=(int ) *q){
+	 	printf("%c",*p);
+	 	kar(p+1,q);
+		 }
+		 else{
+		printf("%c",*q);
+	 	kar(p,q+1);
+		 }
+	 	
+	 	
+	 }
+ 	
+ }
+ 
+ void ters(char *p){
+ 	if(*(p+1)==NULL){
+ 		printf("%c",*(p));
+ 		return ;
+	 }else{
+	 	ters(p+1);
+	 	printf("%c",*p);
+	 }
+ 	
+ }
+
+ int main()
+ {	
+ 
+ 
+ 
+ 
+ 
+{
+	
+
+  char *p,dizi[10];
+  char *q,dizi1[10];
+  printf(" gir");scanf("%s",dizi);
+  printf("gir");scanf("%s",dizi1);
+  p=&dizi[0];
+  q=&dizi1[0];
+  
+kar(p,q);//
+printf("-------\n");
+
+ters(p);//
+  
+ return 0;
+}
+ }
